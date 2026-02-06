@@ -15,7 +15,7 @@ class AppsHandler:
         self,
         name: str,
         description: Optional[str] = None,
-        version: Optional[str] = None
+        version: Optional[str] = None,
     ) -> Dict[str, Any]:
         """Create a new application"""
         payload = {"name": name}
@@ -23,28 +23,24 @@ class AppsHandler:
             payload["description"] = description
         if version:
             payload["version"] = version
-            
-        return await self.client.request("POST", "/api/key/dashboard/apps/create", payload)
+
+        return await self.client.request(
+            "POST", "/api/key/dashboard/apps/create", payload
+        )
 
     async def get_app_details(self, app_id: str) -> Dict[str, Any]:
         """Get details for a specific application"""
         return await self.client.request("GET", f"/api/key/dashboard/apps/{app_id}")
 
     async def reset_hwid(
-        self,
-        app_id: str,
-        username: str,
-        password: str,
-        license_key: str
+        self, app_id: str, username: str, password: str, license_key: str
     ) -> Dict[str, Any]:
         """Reset HWID for a license"""
         payload = {
             "username": username,
             "password": password,
-            "license_key": license_key
+            "license_key": license_key,
         }
         return await self.client.request(
-            "POST",
-            f"/api/key/dashboard/apps/{app_id}/reset-hwid",
-            payload
+            "POST", f"/api/key/dashboard/apps/{app_id}/reset-hwid", payload
         )

@@ -11,7 +11,7 @@ class LicensesHandler:
         app_id: str,
         days: Optional[int] = None,
         max_hwids: Optional[int] = None,
-        metadata: Optional[Dict[str, Any]] = None
+        metadata: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         """Create a new license for an application"""
         payload = {}
@@ -21,16 +21,13 @@ class LicensesHandler:
             payload["max_hwids"] = max_hwids
         if metadata:
             payload["metadata"] = metadata
-            
+
         return await self.client.request(
-            "POST",
-            f"/api/key/dashboard/apps/{app_id}/create-license",
-            payload
+            "POST", f"/api/key/dashboard/apps/{app_id}/create-license", payload
         )
 
     async def delete_unused(self, app_id: str) -> Dict[str, Any]:
         """Delete unused licenses for an application"""
         return await self.client.request(
-            "POST",
-            f"/api/key/dashboard/apps/{app_id}/licenses/delete-unused"
+            "POST", f"/api/key/dashboard/apps/{app_id}/licenses/delete-unused"
         )

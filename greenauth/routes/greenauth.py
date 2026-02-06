@@ -11,7 +11,7 @@ from .webhooks import WebhooksHandler
 class GreenAuthAPI:
     def __init__(self, server_url: str | None = None, api_key: str | None = None):
         self.client = APIClient(server_url, api_key)
-        
+
         self.auth = AuthHandler(self.client)
         self.apps = AppsHandler(self.client)
         self.licenses = LicensesHandler(self.client)

@@ -21,7 +21,7 @@ __license__ = "MIT"
 __all__ = [
     "APIClient",
     "AuthHandler",
-    "AppsHandler", 
+    "AppsHandler",
     "LicensesHandler",
     "UsersHandler",
     "SecurityHandler",

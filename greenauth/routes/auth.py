@@ -13,7 +13,7 @@ class AuthHandler:
         license_key: str,
         hwid: str,
         app_id: str,
-        app_name: str
+        app_name: str,
     ) -> Dict[str, Any]:
         """Register a new user with username/password and license key"""
         payload = {
@@ -22,17 +22,12 @@ class AuthHandler:
             "license_key": license_key,
             "hwid": hwid,
             "app_id": app_id,
-            "app_name": app_name
+            "app_name": app_name,
         }
         return await self.client.request("POST", "/register", payload)
 
     async def login(
-        self,
-        username: str,
-        password: str,
-        hwid: str,
-        app_id: str,
-        app_name: str
+        self, username: str, password: str, hwid: str, app_id: str, app_name: str
     ) -> Dict[str, Any]:
         """Authenticate a user"""
         payload = {
@@ -40,6 +35,6 @@ class AuthHandler:
             "password": password,
             "hwid": hwid,
             "app_id": app_id,
-            "app_name": app_name
+            "app_name": app_name,
         }
         return await self.client.request("POST", "/login", payload)

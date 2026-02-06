@@ -9,9 +9,9 @@ from .webhooks import WebhooksHandler
 __all__ = [
     "APIClient",
     "AuthHandler",
-    "AppsHandler", 
+    "AppsHandler",
     "LicensesHandler",
     "UsersHandler",
     "SecurityHandler",
-    "WebhooksHandler"
+    "WebhooksHandler",
 ]
