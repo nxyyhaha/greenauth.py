@@ -1,6 +1,7 @@
-import pytest
 import asyncio
 from unittest.mock import AsyncMock, patch
+
+import pytest
 
 
 class TestBasicImports:
@@ -8,7 +9,7 @@ class TestBasicImports:
 
     def test_import_main_classes(self):
         """Test importing main API classes."""
-        from greenauth import GreenAuthAPI, APIClient
+        from greenauth import APIClient, GreenAuthAPI
 
         assert GreenAuthAPI is not None
         assert APIClient is not None
@@ -16,11 +17,11 @@ class TestBasicImports:
     def test_import_handlers(self):
         """Test importing handler classes."""
         from greenauth import (
-            AuthHandler,
             AppsHandler,
+            AuthHandler,
             LicensesHandler,
-            UsersHandler,
             SecurityHandler,
+            UsersHandler,
             WebhooksHandler,
         )
 
@@ -61,7 +62,7 @@ class TestGreenAuthAPI:
 
     def test_handlers_creation(self):
         """Test that all handlers are created."""
-        from greenauth import GreenAuthAPI, AuthHandler, AppsHandler
+        from greenauth import AppsHandler, AuthHandler, GreenAuthAPI
 
         api = GreenAuthAPI(api_key="test_key")
 

@@ -1,10 +1,11 @@
 import os
-from .client import APIClient
-from .auth import AuthHandler
+
 from .apps import AppsHandler
+from .auth import AuthHandler
+from .client import APIClient
 from .licenses import LicensesHandler
-from .users import UsersHandler
 from .security import SecurityHandler
+from .users import UsersHandler
 from .webhooks import WebhooksHandler
 
 
