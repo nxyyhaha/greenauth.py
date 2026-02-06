@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "greenauth-py"
+name = "greenauth"
 version = "1.0.0"
 description = "Python SDK for GreenAuth authentication service"
 readme = "README.md"
@@ -47,10 +47,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/greenauth/greenauth-py"
+Homepage = "https://greenauth.co.uk"
 Documentation = "https://greenauth.co.uk/docs"
-Repository = "https://github.com/greenauth/greenauth-py"
-"Bug Tracker" = "https://github.com/greenauth/greenauth-py/issues"
+Repository = "https://github.com/nxyyhaha/greenauth.py"
+Issues = "https://github.com/nxyyhaha/greenauth.py/issues"
 
 [tool.setuptools.packages.find]
 exclude = ["tests*"]

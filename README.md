@@ -1,15 +1,15 @@
 # GreenAuth Python SDK
 
-[![PyPI version](https://badge.fury.io/py/greenauth-py.svg)](https://badge.fury.io/py/greenauth-py)
-[![Python versions](https://img.shields.io/pypi/pyversions/greenauth-py.svg)](https://pypi.org/project/greenauth-py/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![PyPI version](https://badge.fury.io/py/greenauth.svg)](https://badge.fury.io/py/greenauth)
+[![Python versions](https://img.shields.io/pypi/pyversions/greenauth.svg)](https://pypi.org/project/greenauth/)
+[![License](https://img.shields.io/badge/License-GNU-lime.svg)](https://opensource.org/licenses/gpl-3-0)
 
 Official Python SDK for the GreenAuth authentication service.
 
 ## Installation
 
 ```bash
-pip install greenauth-py
+pip install greenauth
 ```
 
 ## Quick Start
