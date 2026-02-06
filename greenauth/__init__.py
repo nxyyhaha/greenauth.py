@@ -4,6 +4,7 @@ GreenAuth Python SDK
 Official Python SDK for GreenAuth authentication service.
 """
 
+from .routes.client import APIClient
 from .routes.auth import AuthHandler
 from .routes.apps import AppsHandler
 from .routes.licenses import LicensesHandler
@@ -18,5 +19,12 @@ __email__ = "support@greenauth.co.uk"
 __license__ = "MIT"
 
 __all__ = [
+    "APIClient",
+    "AuthHandler",
+    "AppsHandler", 
+    "LicensesHandler",
+    "UsersHandler",
+    "SecurityHandler",
+    "WebhooksHandler",
     "GreenAuthAPI",
 ]
