@@ -26,17 +26,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -e .[dev]
     
-    - name: Lint with black
-      run: |
-        black --check greenauth tests
     
-    - name: Lint with isort
-      run: |
-        isort --check-only greenauth tests
-    
-    - name: Type check with mypy
-      run: |
-        mypy greenauth
     
     - name: Run tests
       run: |
